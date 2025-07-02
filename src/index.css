@@ -1,9 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-
 @custom-variant dark (&:is(.dark *));
 
-@theme inline  {
+@theme inline {
   --font-sans: Inter, sans-serif;
   --font-mono: Roboto Mono, monospace;
 
@@ -75,6 +74,17 @@
   }
 }
 
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-100, currentcolor);
+  }
+}
+
 :root {
   --background: 0 0% 0%;
   --foreground: 0 0% 100%;
@@ -109,7 +119,6 @@
   --sidebar-accent-foreground: 0 0% 98%;
   --sidebar-border: 0 0% 100%;
   --sidebar-ring: 0 0% 100%;
-  --sidebar: hsl(0 0% 98%);
 }
 
 .dark {
@@ -145,21 +154,11 @@
   --sidebar-accent-foreground: 0 0% 98%;
   --sidebar-border: 0 0% 100%;
   --sidebar-ring: 0 0% 100%;
-  --sidebar: hsl(240 5.9% 10%);
 }
 
 @layer base {
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;

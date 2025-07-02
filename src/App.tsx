@@ -5,7 +5,7 @@ import { FocusPriorities } from "@/components/todo-list";
 
 export default function App() {
   return (
-    <main className="flex min-h-dvh flex-col items-center justify-center  p-4 antialiased">
+    <main className="flex min-h-dvh flex-col items-center justify-center bg-background p-4 antialiased">
       <div className="flex flex-col items-center justify-center gap-8 w-full max-w-lg">
         <FocusPriorities />
         <Timer />
